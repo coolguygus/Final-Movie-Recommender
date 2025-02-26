@@ -4,5 +4,5 @@ data class Movie(
     val id: Int,
     val title: String,
     val overview: String,
-    val poster_path: String? // Can be null if no poster is available
+    val poster_path: String?
 )

@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// ✅ Step 1: Set Up Navigation
+//Set Up Navigation
 @Composable
 fun AppNavigator(apiKey: String) {
     val navController = rememberNavController()
@@ -47,7 +47,7 @@ fun AppNavigator(apiKey: String) {
     }
 }
 
-// ✅ Step 2: Genre Selection Screen
+//Genre Selection Screen
 @Composable
 fun GenreSelectionScreen(navController: NavController, apiKey: String) {
     var genres by remember { mutableStateOf<List<Genre>?>(null) }
@@ -111,7 +111,7 @@ fun GenreSelectionScreen(navController: NavController, apiKey: String) {
     }
 }
 
-// ✅ Step 3: Movie Recommendation Screen
+//Movie Recommendation Screen
 @Composable
 fun MovieRecommendationScreen(navController: NavController, apiKey: String, genreIds: String) {
     var recommendedMovies by remember { mutableStateOf<List<Movie>?>(null) }
@@ -165,7 +165,7 @@ fun MovieRecommendationScreen(navController: NavController, apiKey: String, genr
 }
 
 
-// ✅ Step 4: Genre Checkbox
+//Genre Checkbox
 @Composable
 fun GenreCheckbox(genre: Genre, isSelected: Boolean, onToggle: (Boolean) -> Unit) {
     Row(
@@ -182,7 +182,7 @@ fun GenreCheckbox(genre: Genre, isSelected: Boolean, onToggle: (Boolean) -> Unit
     }
 }
 
-// ✅ Step 5: Movie Item with Poster
+//Movie Item with Poster
 @Composable
 fun MovieItem(movie: Movie) {
     Row(
